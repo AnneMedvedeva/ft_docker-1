@@ -1,0 +1,13 @@
+FROM ubuntu
+LABEL maintainer="Anna M. anna@intelsea.com"
+LABEL Description="These are a few of my favourite things~"
+
+RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get install clang -y
+RUN apt-get install git -y
+RUN apt-get install manpages-posix manpages-posix-dev -y
+
+RUN apt-get install vim -y
+RUN apt-get install make -y
+
+CMD /bin/bash
